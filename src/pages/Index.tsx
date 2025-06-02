@@ -28,19 +28,18 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen bg-white">
       <Navigation currentPage={currentPage} onNavigate={setCurrentPage} />
       
       <div className="transition-all duration-500 ease-in-out">
         {renderPage()}
       </div>
       
-      {/* Footer */}
-      <footer className="bg-slate-800 text-white py-8">
-        <div className="container mx-auto px-6 text-center">
-          <div className="text-lg font-light mb-2">ABDOULLAH NDAO</div>
-          <p className="text-slate-400 text-sm">Data Scientist & AI Engineer</p>
-          <p className="text-slate-500 text-xs mt-2">© 2024 Abdoullah Ndao. All rights reserved.</p>
+      <footer className="border-t border-gray-100 py-8">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <div className="text-sm font-light text-gray-500">
+            © 2024 Abdoullah Ndao
+          </div>
         </div>
       </footer>
     </div>
