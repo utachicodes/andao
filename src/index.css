@@ -15,23 +15,23 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 186 100% 42%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 220 14% 96%;
+    --primary-foreground: 220.9 39.3% 11%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220.9 39.3% 11%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 8.9% 46.1%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 220 14% 96%;
+    --accent-foreground: 220.9 39.3% 11%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
@@ -44,126 +44,9 @@
   }
 
   body {
-    @apply bg-ocean-deep text-white font-inter;
+    @apply bg-gray-50 text-slate-800 font-inter;
     font-weight: 300;
   }
-}
-
-@layer components {
-  .ocean-gradient {
-    background: linear-gradient(135deg, #0A1628 0%, #1A365D 30%, #0D9488 70%, #00D4FF 100%);
-  }
-  
-  .bioluminescent-glow {
-    text-shadow: 0 0 20px rgba(0, 212, 255, 0.6), 0 0 40px rgba(0, 212, 255, 0.3);
-  }
-  
-  .floating-particle {
-    position: absolute;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(0, 212, 255, 0.8) 0%, transparent 70%);
-    animation: sophisticated-float 8s ease-in-out infinite;
-  }
-  
-  .bubble {
-    position: absolute;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-    animation: sophisticated-bubble 20s ease-in-out infinite;
-  }
-  
-  .ripple-effect {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .ripple-effect:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(0, 212, 255, 0.2);
-    transform: translate(-50%, -50%);
-    transition: width 0.8s ease-out, height 0.8s ease-out;
-  }
-  
-  .ripple-effect:hover:before {
-    width: 400px;
-    height: 400px;
-  }
-}
-
-@keyframes sophisticated-wave {
-  0%, 100% { transform: translateX(-100%) skewY(-1deg); }
-  50% { transform: translateX(100%) skewY(1deg); }
-}
-
-@keyframes sophisticated-float {
-  0%, 100% { 
-    transform: translateY(0px) translateX(0px) rotate(0deg) scale(1); 
-    opacity: 0.6;
-  }
-  25% { 
-    transform: translateY(-30px) translateX(10px) rotate(90deg) scale(1.1); 
-    opacity: 0.8;
-  }
-  50% { 
-    transform: translateY(-15px) translateX(-10px) rotate(180deg) scale(0.9); 
-    opacity: 1;
-  }
-  75% { 
-    transform: translateY(-25px) translateX(15px) rotate(270deg) scale(1.05); 
-    opacity: 0.7;
-  }
-}
-
-@keyframes sophisticated-bubble {
-  0% { 
-    transform: translateY(100vh) scale(0.1) rotate(0deg); 
-    opacity: 0; 
-  }
-  10% { 
-    opacity: 0.6; 
-    transform: translateY(90vh) scale(0.3) rotate(45deg); 
-  }
-  50% { 
-    opacity: 0.8; 
-    transform: translateY(50vh) scale(0.8) rotate(180deg); 
-  }
-  90% { 
-    opacity: 0.4; 
-    transform: translateY(10vh) scale(1) rotate(315deg); 
-  }
-  100% { 
-    transform: translateY(-10vh) scale(0.2) rotate(360deg); 
-    opacity: 0; 
-  }
-}
-
-@keyframes neural-pulse {
-  0%, 100% { 
-    opacity: 0.3; 
-    transform: scale(1); 
-    box-shadow: 0 0 5px currentColor;
-  }
-  50% { 
-    opacity: 1; 
-    transform: scale(1.5); 
-    box-shadow: 0 0 20px currentColor, 0 0 30px currentColor;
-  }
-}
-
-@keyframes ambient-glow {
-  0% { opacity: 0.3; transform: scale(1); }
-  100% { opacity: 0.8; transform: scale(1.2); }
-}
-
-@keyframes ray-shimmer {
-  0% { opacity: 0.2; }
-  100% { opacity: 0.6; }
 }
 
 /* Smooth scroll */
@@ -177,14 +60,14 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(10, 22, 40, 0.5);
+  background: rgba(248, 250, 252, 0.5);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #0D9488, #00D4FF);
+  background: linear-gradient(180deg, #64748b, #334155);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #00D4FF, #0D9488);
+  background: linear-gradient(180deg, #334155, #64748b);
 }

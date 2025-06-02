@@ -1,10 +1,9 @@
 
 import { useState } from 'react';
 import Navigation from '@/components/Navigation';
-import OceanBackground from '@/components/OceanBackground';
 import HomePage from '@/components/HomePage';
 import AboutPage from '@/components/AboutPage';
-import TechnologyPage from '@/components/TechnologyPage';
+import ExperiencePage from '@/components/ExperiencePage';
 import ProjectsPage from '@/components/ProjectsPage';
 import ContactPage from '@/components/ContactPage';
 
@@ -17,8 +16,8 @@ const Index = () => {
         return <HomePage onNavigate={setCurrentPage} />;
       case 'about':
         return <AboutPage />;
-      case 'technology':
-        return <TechnologyPage />;
+      case 'experience':
+        return <ExperiencePage />;
       case 'projects':
         return <ProjectsPage />;
       case 'contact':
@@ -29,20 +28,19 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-x-hidden">
-      <OceanBackground />
+    <div className="min-h-screen relative">
       <Navigation currentPage={currentPage} onNavigate={setCurrentPage} />
       
-      <div className="relative z-10 transition-all duration-500 ease-in-out">
+      <div className="transition-all duration-500 ease-in-out">
         {renderPage()}
       </div>
       
       {/* Footer */}
-      <footer className="relative z-10 bg-ocean-deep/80 backdrop-blur-md border-t border-ocean-cyan/20 py-8">
+      <footer className="bg-slate-800 text-white py-8">
         <div className="container mx-auto px-6 text-center">
-          <div className="text-ocean-bioluminescent font-bold text-xl mb-2">DeepSea AI</div>
-          <p className="text-white/60 text-sm">Protecting our oceans with artificial intelligence</p>
-          <p className="text-white/40 text-xs mt-2">© 2024 DeepSea AI. Based in Dakar, Senegal.</p>
+          <div className="text-lg font-light mb-2">ABDOULLAH NDAO</div>
+          <p className="text-slate-400 text-sm">Data Scientist & AI Engineer</p>
+          <p className="text-slate-500 text-xs mt-2">© 2024 Abdoullah Ndao. All rights reserved.</p>
         </div>
       </footer>
     </div>

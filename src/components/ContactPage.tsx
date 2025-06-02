@@ -1,195 +1,103 @@
 
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { useToast } from '@/hooks/use-toast';
 
 const ContactPage = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    organization: '',
-    subject: '',
-    message: ''
-  });
-  const { toast } = useToast();
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Simulate form submission
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. We'll get back to you soon.",
-    });
-    setFormData({ name: '', email: '', organization: '', subject: '', message: '' });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
   return (
-    <div className="min-h-screen pt-24 pb-16">
+    <div className="min-h-screen pt-24 pb-16 bg-gradient-to-br from-gray-50 to-white">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-inter font-bold mb-6 bioluminescent-glow">
+            <h1 className="text-4xl md:text-6xl font-light mb-6 text-slate-800">
               Get In Touch
             </h1>
-            <p className="text-xl text-white/80 max-w-2xl mx-auto">
-              Join us in protecting our oceans. Whether you're a researcher, partner, or supporter, we'd love to hear from you.
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto font-light">
+              Let's discuss how we can work together to bring your data science projects to life.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-ocean-cyan/20 p-8">
-              <h2 className="text-2xl font-semibold text-ocean-bioluminescent mb-6">Send us a message</h2>
+            <div className="space-y-6">
+              <h2 className="text-2xl font-light text-slate-800 mb-6">Send a Message</h2>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-white/80 mb-2">Name *</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-ocean-cyan/30 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-ocean-bioluminescent transition-colors"
+                  <label className="block text-sm font-medium text-slate-700 mb-2">Name</label>
+                  <input 
+                    type="text" 
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-300"
                     placeholder="Your full name"
                   />
                 </div>
-
+                
                 <div>
-                  <label htmlFor="email" className="block text-white/80 mb-2">Email *</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-ocean-cyan/30 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-ocean-bioluminescent transition-colors"
-                    placeholder="your@email.com"
+                  <label className="block text-sm font-medium text-slate-700 mb-2">Email</label>
+                  <input 
+                    type="email" 
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-300"
+                    placeholder="your.email@example.com"
                   />
                 </div>
-
+                
                 <div>
-                  <label htmlFor="organization" className="block text-white/80 mb-2">Organization</label>
-                  <input
-                    type="text"
-                    id="organization"
-                    name="organization"
-                    value={formData.organization}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-ocean-cyan/30 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-ocean-bioluminescent transition-colors"
-                    placeholder="Your organization"
+                  <label className="block text-sm font-medium text-slate-700 mb-2">Subject</label>
+                  <input 
+                    type="text" 
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-300"
+                    placeholder="Project inquiry"
                   />
                 </div>
-
+                
                 <div>
-                  <label htmlFor="subject" className="block text-white/80 mb-2">Subject *</label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    required
-                    value={formData.subject}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-ocean-cyan/30 rounded-lg text-white focus:outline-none focus:border-ocean-bioluminescent transition-colors"
-                  >
-                    <option value="">Select a subject</option>
-                    <option value="partnership">Partnership Opportunity</option>
-                    <option value="research">Research Collaboration</option>
-                    <option value="funding">Funding & Investment</option>
-                    <option value="technology">Technology Inquiry</option>
-                    <option value="media">Media & Press</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-white/80 mb-2">Message *</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={5}
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-ocean-cyan/30 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-ocean-bioluminescent transition-colors resize-none"
-                    placeholder="Tell us about your interest in DeepSea AI..."
+                  <label className="block text-sm font-medium text-slate-700 mb-2">Message</label>
+                  <textarea 
+                    rows={6}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-300 resize-none"
+                    placeholder="Tell me about your project..."
                   />
                 </div>
-
-                <Button
-                  type="submit"
-                  className="w-full bg-ocean-teal hover:bg-ocean-cyan text-white font-semibold py-3 rounded-lg transition-all duration-300 hover:animate-glow"
-                >
+                
+                <Button className="w-full bg-slate-800 hover:bg-slate-700 text-white font-medium py-3 rounded-lg transition-all duration-300">
                   Send Message
                 </Button>
-              </form>
+              </div>
             </div>
 
-            {/* Contact Info */}
+            {/* Contact Information */}
             <div className="space-y-8">
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-ocean-cyan/20 p-8">
-                <h3 className="text-xl font-semibold text-ocean-bioluminescent mb-6">Contact Information</h3>
+              <h2 className="text-2xl font-light text-slate-800 mb-6">Contact Information</h2>
+              
+              <div className="space-y-6">
+                <div className="p-6 bg-white/70 rounded-xl border border-gray-200/50">
+                  <h3 className="font-medium text-slate-800 mb-2">Email</h3>
+                  <p className="text-slate-600">abdoullah.ndao@example.com</p>
+                </div>
                 
-                <div className="space-y-4">
-                  <div className="flex items-start">
-                    <div className="text-2xl mr-4">📍</div>
-                    <div>
-                      <div className="text-white font-medium">Headquarters</div>
-                      <div className="text-white/70">Dakar, Senegal</div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="text-2xl mr-4">📧</div>
-                    <div>
-                      <div className="text-white font-medium">Email</div>
-                      <div className="text-white/70">hello@deepsea-ai.org</div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="text-2xl mr-4">🌐</div>
-                    <div>
-                      <div className="text-white font-medium">Coverage</div>
-                      <div className="text-white/70">West African Waters</div>
-                    </div>
-                  </div>
+                <div className="p-6 bg-white/70 rounded-xl border border-gray-200/50">
+                  <h3 className="font-medium text-slate-800 mb-2">Location</h3>
+                  <p className="text-slate-600">Dakar, Senegal</p>
+                </div>
+                
+                <div className="p-6 bg-white/70 rounded-xl border border-gray-200/50">
+                  <h3 className="font-medium text-slate-800 mb-2">Phone</h3>
+                  <p className="text-slate-600">+221 XX XXX XXXX</p>
                 </div>
               </div>
-
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-ocean-cyan/20 p-8">
-                <h3 className="text-xl font-semibold text-ocean-bioluminescent mb-6">Partnership Opportunities</h3>
-                
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-ocean-teal rounded-full mr-3"></div>
-                    <span className="text-white/80">Research Institutions</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-ocean-teal rounded-full mr-3"></div>
-                    <span className="text-white/80">Government Agencies</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-ocean-teal rounded-full mr-3"></div>
-                    <span className="text-white/80">Conservation Organizations</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-ocean-teal rounded-full mr-3"></div>
-                    <span className="text-white/80">Technology Companies</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-ocean-teal rounded-full mr-3"></div>
-                    <span className="text-white/80">Fishing Communities</span>
-                  </div>
+              
+              {/* Social Links */}
+              <div className="pt-6">
+                <h3 className="font-medium text-slate-800 mb-4">Connect With Me</h3>
+                <div className="flex space-x-4">
+                  <a href="#" className="w-12 h-12 bg-slate-800 text-white rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors duration-300">
+                    LI
+                  </a>
+                  <a href="#" className="w-12 h-12 bg-slate-800 text-white rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors duration-300">
+                    GH
+                  </a>
+                  <a href="#" className="w-12 h-12 bg-slate-800 text-white rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors duration-300">
+                    TW
+                  </a>
                 </div>
               </div>
             </div>
