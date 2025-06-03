@@ -1,55 +1,38 @@
+# Abdoullah Ndao – Developer Portfolio
 
-# Abdoullah Ndao - Portfolio
+This is my personal developer portfolio — a sleek and modern web app that showcases my skills, projects, and experience as a **Junior Machine Learning Engineer** and **Frontend Developer**.
 
-A modern, minimalistic portfolio website showcasing my work as a Junior ML Engineer and Frontend Developer.
+---
 
-## Built With
+## 🧠 About
 
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- shadcn/ui
+I'm Abdoullah Ndao, a developer passionate about building thoughtful, user-friendly, and intelligent digital experiences. I specialize in modern frontend development and have a growing focus on machine learning. This portfolio highlights the best of both worlds — beautifully crafted UIs and data-driven logic.
 
-## Getting Started
+Whether you're a recruiter, potential collaborator, or just browsing, feel free to explore my work and reach out if you’re interested in connecting.
+
+---
+
+## 🛠️ Tech Stack
+
+- **React** – Component-based frontend framework  
+- **TypeScript** – Type-safe JavaScript  
+- **Vite** – Fast bundler and dev server  
+- **Tailwind CSS** – Utility-first styling  
+- **shadcn/ui** – Accessible components built on Radix UI
+
+---
+
+## ⚙️ Getting Started
 
 ### Prerequisites
 
-- Node.js (v18 or higher)
+- Node.js v18+
 - npm or yarn
 
 ### Installation
 
-1. Clone the repository
 ```bash
-git clone <your-repo-url>
-cd portfolio
-```
-
-2. Install dependencies
-```bash
+git clone https://github.com/utachicodes/portfolio-website
+cd your-repo-name
 npm install
-```
-
-3. Start the development server
-```bash
 npm run dev
-```
-
-4. Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
-
-## Deployment
-
-Build the project for production:
-
-```bash
-npm run build
-```
-
-The build files will be in the `dist` directory, ready for deployment to any static hosting service.
-
-## Contact
-
-Abdoullah Ndao - abdoullahaljersi@gmail.com
-
-Project Link: [https://github.com/utachicodes](https://github.com/utachicodes)
