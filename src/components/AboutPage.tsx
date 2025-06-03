@@ -5,7 +5,7 @@ const AboutPage = () => {
   const skills = [
     {
       category: "Programming Languages",
-      items: ["Python", "JavaScript", "Lua", "HTML/CSS", "TypeScript"]
+      items: ["Python", "JavaScript", "Lua", "HTML/CSS", "TypeScript", "C++" , "MySQL"]
     },
     {
       category: "Data & ML",
@@ -58,21 +58,24 @@ const AboutPage = () => {
           {/* About content */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <h2 className="text-2xl font-medium text-white">Hello, I'm Abdoullah</h2>
+              <h2 className="text-2xl font-medium text-white">Hello, I'm Abdoullah Ndao</h2>
               <p className="text-gray-400 leading-relaxed">
-                I'm a junior Machine Learning Engineer and Frontend Developer based in Senegal, 
-                passionate about creating intelligent solutions that make a difference. Currently 
-                pursuing my studies while gaining hands-on experience through various projects and internships.
+              I'm a Data Analyst and Frontend Developer based in Senegal. 
+              I didn’t grow up dreaming of a career in tech but I adapted to it with purpose. 
+              My true passion is nature: the ocean, marine life, and protecting our planet. 
+              I see technology as a powerful way to support conservation and scientific research, 
+              especially in marine biology, which is where I hope to make my biggest impact.
               </p>
               <p className="text-gray-400 leading-relaxed">
-                My journey in tech started with curiosity about how things work, which led me to 
-                programming, data analysis, and eventually machine learning. I enjoy the process 
-                of turning complex problems into elegant solutions.
+              I’ve built a strong skill set in data analysis, data visualization, 
+              and frontend development using tools like React, TypeScript, Python, and SQL.
+              I enjoy turning raw data into clear insights and crafting digital experiences that are thoughtful,
+              useful, and human-centered. Whether it's dashboards, web apps, or AI-driven tools,
+              I aim to build solutions that can support real-world environmental and community needs
               </p>
               <p className="text-gray-400 leading-relaxed">
-                When I'm not coding, you'll find me leading student organizations, working on 
-                community projects, or exploring new technologies. I believe in continuous learning 
-                and sharing knowledge with others.
+              Outside of work, I love skateboarding, writing poetry, and getting involved in student and community projects. 
+              I’m always learning, always evolving and I believe that meaningful change starts with curiosity, creativity, and care.
               </p>
             </div>
 

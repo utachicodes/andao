@@ -5,83 +5,48 @@ const PoetryPage = () => {
   const poems = [
     {
       id: 1,
-      title: "Digital Dreams",
+      title: "The Womb of Memory",
       date: "2024-12-15",
-      excerpt: "In lines of code, I find my voice...",
-      content: `In lines of code, I find my voice,
-Where algorithms make their choice,
-Between the zeros and the ones,
-My digital journey has begun.
+      excerpt: "The womb cradles echoes of sisters' sighs...",
+      content: `The womb cradles echoes of sisters' sighs,
+Where laughter and sorrow in harmony lie.
+A bond everlasting, both fragile and strong,
+A chorus of voices, life’s endless song.
 
-Through neural networks, deep and wide,
-Where data flows like ocean tide,
-I seek patterns in the maze,
-Of artificial intelligence rays.
+Through time’s soft shadows, our stories reside,
+Woven in silence, where memories abide.
+A tapestry vivid, with threads bright and worn,
+Of love that’s eternal, through joy and the storm.
 
-Each function call, each loop I write,
-Illuminates the darkest night,
-In Python's syntax, clean and clear,
-My future path becomes more near.`
+Family’s a fire, both tender and grand,
+A guiding light, hand clasped in hand.
+Through trials and triumphs, the tale it unfolds,
+The womb of memory forever holds.`
     },
     {
       id: 2,
-      title: "Senegalese Sunrise",
+      title: "ico: The Star Unclaimed",
       date: "2024-11-28",
-      excerpt: "From Dakar's shores to endless sky...",
-      content: `From Dakar's shores to endless sky,
-Where dreams take wing and learn to fly,
-The morning sun breaks through the mist,
-A golden moment I can't resist.
-
-In Wolof whispers, stories told,
-Of wisdom passed from young to old,
-The baobab stands tall and proud,
-Above the bustling, vibrant crowd.
-
-Technology meets tradition here,
-Where past and future interfere,
-Creating bridges, strong and new,
-Between the old and breakthrough.`
-    },
-    {
-      id: 3,
-      title: "The Algorithm's Heart",
-      date: "2024-10-20",
-      excerpt: "If machines could feel, what would they say...",
-      content: `If machines could feel, what would they say,
-About the world we build each day?
-Would they understand our fears,
-Our hopes, our joys, our unshed tears?
-
-In supervised learning's gentle care,
-We teach them patterns everywhere,
-But can they grasp the human soul,
-The parts that make us truly whole?
-
-Perhaps in neural networks deep,
-Some fragments of our essence seep,
-Creating bonds beyond the code,
-Where human hearts and AI's rode.`
-    },
-    {
-      id: 4,
-      title: "Innovation's Call",
-      date: "2024-09-15",
-      excerpt: "In every bug, a lesson waits...",
-      content: `In every bug, a lesson waits,
-In every error, wisdom creates,
-The path of coding, steep and long,
-Makes weak developers grow strong.
-
-Through iterations, we refine,
-Our craft becomes more pure, divine,
-Each challenge faced, each problem solved,
-Our understanding gets evolved.
-
-The startup dream burns bright and true,
-In Senegal's entrepreneurial crew,
-Where innovation meets the sea,
-And sets our creative spirits free.`
+      excerpt: "She is a star that lights the night...",
+      content: `She is a star that lights the night,
+A glow too pure, a spark too bright.
+The world may watch, may chase her gleam,
+But none can know the depths unseen.
+      
+She walks, and whispers fill the air,
+Yet none should dare to stop and stare.
+They call her name, they seek her gaze,
+As if she’s theirs to set ablaze.
+      
+The wind may dance within her hijab,
+The sun may shine to keep her wrapped.
+But she’s a storm, untamed and free,
+And none should claim what’s not meant for thy.
+      
+Let them try, let them yearn,
+But some lights aren't theirs to turn.
+For though the world may crave her grace,
+Not all deserve to know her space.`
     }
   ];
 
@@ -94,7 +59,7 @@ And sets our creative spirits free.`
           </h1>
           <div className="w-20 h-px bg-gray-600 mb-8"></div>
           <p className="text-xl text-gray-400 font-light">
-            Where code meets creativity - exploring life through verse
+            I guess coders make good poets, welcome to the another side of me.
           </p>
         </div>
 
@@ -132,13 +97,13 @@ And sets our creative spirits free.`
             <BookOpen className="w-12 h-12 text-gray-400 mx-auto mb-4" />
             <h3 className="text-xl font-medium text-white mb-2">More Poetry Coming Soon</h3>
             <p className="text-gray-400 mb-6">
-              I'm constantly writing and exploring new themes that bridge technology and humanity.
+              I'm constantly writing and exploring new themes about the human experience, family, and the world around us.
             </p>
             <div className="bg-gray-900/50 border border-gray-700/30 rounded-lg p-4 font-mono text-sm text-left max-w-md mx-auto">
               <div className="text-gray-400">$ git log --oneline poetry/</div>
               <div className="text-gray-500 mt-2">
-                a1b2c3d Added "Innovation's Call"<br/>
-                d4e5f6g Updated "The Algorithm's Heart"<br/>
+                a1b2c3d Added "Ico"<br/>
+                d4e5f6g Updated "The Womb of Memory"<br/>
                 <span className="text-gray-400">Working on new verses...</span>
               </div>
             </div>

@@ -13,10 +13,10 @@ const HomePage = ({ onNavigate }: HomePageProps) => {
   const [currentRole, setCurrentRole] = useState(0);
   
   const roles = [
-    'Junior ML Engineer',
+    'Data Analyst',
+    'Machine Learning Engineer',
     'Frontend Developer', 
     'Python Developer',
-    'Data Enthusiast'
   ];
 
   useEffect(() => {
@@ -97,16 +97,17 @@ const HomePage = ({ onNavigate }: HomePageProps) => {
             </div>
 
             <h1 className="text-5xl md:text-6xl font-light mb-6 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
-              Abdoullah Ndao
+              Hi, I'm Abdoullah
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 font-light">
-              Building intelligent solutions, one line at a time
+              I build cool stuff that actually works.
             </p>
             
             <p className="text-lg text-gray-400 mb-12 font-light max-w-2xl mx-auto leading-relaxed">
-              Junior ML Engineer passionate about data, AI, and creating meaningful digital experiences. 
-              Always learning, always building.
+            I’m a Data Analyst who loves working with data, AI, and building digital experiences that matter. 
+            I’ve always been drawn to the ocean, and my long-term goal is to become a marine biologist. 
+            Always curious, always creating.
             </p>
 
             {/* Tech stack */}

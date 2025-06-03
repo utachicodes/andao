@@ -18,7 +18,7 @@ const ContactPage = () => {
     {
       icon: MapPin,
       label: "Location",
-      value: "Dakar, Senegal",
+      value: "Somone, Senegal",
       link: null
     }
   ];
@@ -119,7 +119,6 @@ const ContactPage = () => {
               <Button 
                 className="bg-white text-black hover:bg-gray-100 font-medium"
                 onClick={() => {
-                  // Replace with your Google Drive link
                   window.open('YOUR_GOOGLE_DRIVE_RESUME_LINK', '_blank');
                 }}
               >
@@ -127,7 +126,6 @@ const ContactPage = () => {
                 Download Resume
               </Button>
               <p className="text-xs text-gray-500 mt-2">
-                Note: Please add your Google Drive resume link to make this functional
               </p>
             </div>
           </div>

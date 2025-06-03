@@ -1,6 +1,6 @@
 # Abdoullah Ndao – Developer Portfolio
 
-This is my personal developer portfolio — a sleek and modern web app that showcases my skills, projects, and experience as a **Junior Machine Learning Engineer** and **Frontend Developer**.
+This is my personal developer portfolio — a sleek and modern web app that showcases my skills, projects, and experience as a **Data Analyst**, **Junior Machine Learning Engineer** and **Frontend Developer**.
 
 ---
 

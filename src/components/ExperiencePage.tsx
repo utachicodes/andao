@@ -44,11 +44,12 @@ const ExperiencePage = () => {
       company: "DeepSea AI",
       period: "Oct 2023 - Nov 2024",
       type: "Self-employed · Remote",
-      description: "Founded startup leveraging AI and drone technology for marine conservation, developing solutions to monitor and analyze marine ecosystems.",
+      description: "Co-Founded a startup leveraging AI and drone technology for marine conservation, developing solutions to monitor and analyze marine ecosystems.",
       achievements: [
-        "Deployed computer vision and ML algorithms for marine life detection",
-        "Revolutionized marine habitat data collection methods",
-        "Provided insights for conservation efforts"
+        "Created computer vision and ML algorithms for marine life detection in Senegal",
+        "Presented one of our innovative marine conservation solutions at the IndabaX 2023",
+        "Was selected among the top 10 startups for the 2025 VivaTech Summit",
+        "Provided insights for conservation efforts through AI-driven data analysis"
       ]
     },
     {
