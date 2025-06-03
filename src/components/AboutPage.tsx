@@ -16,13 +16,19 @@ const AboutPage = () => {
               <h2 className="text-2xl font-light text-gray-900 mb-6">Background</h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Passionate data scientist and AI engineer with expertise in machine learning, 
-                  deep learning, and advanced analytics. Experienced in transforming complex 
-                  datasets into actionable business insights.
+                  Python Developer and AI Engineer specializing in cutting-edge artificial intelligence models, 
+                  machine learning solutions, and dynamic web and mobile applications. I work closely with clients 
+                  to design and develop custom software that leverages Python's capabilities to deliver intelligent, 
+                  data-driven solutions.
                 </p>
                 <p>
-                  Specialized in developing predictive models, implementing AI solutions, 
-                  and leading data-driven initiatives across various industries.
+                  From building predictive models and automating processes to developing responsive websites and 
+                  scalable apps, I focus on delivering high-performance, innovative solutions that drive business 
+                  growth and efficiency.
+                </p>
+                <p>
+                  Currently pursuing my studies at Dakar American University of Science and Technology while 
+                  actively contributing to various organizations and leading innovative projects.
                 </p>
               </div>
             </div>
@@ -31,12 +37,14 @@ const AboutPage = () => {
               <h2 className="text-2xl font-light text-gray-900 mb-6">Focus Areas</h2>
               <div className="space-y-3">
                 {[
-                  'Machine Learning & AI',
-                  'Data Science & Analytics',
-                  'Predictive Modeling',
-                  'Deep Learning',
-                  'Statistical Analysis',
-                  'Business Intelligence'
+                  'Artificial Intelligence & Machine Learning',
+                  'Python Development',
+                  'Computer Vision & Neural Networks',
+                  'Natural Language Processing',
+                  'Robotics & Automation',
+                  'Data Analysis & Visualization',
+                  'Web & Mobile Development',
+                  'Database Management'
                 ].map((skill, index) => (
                   <div key={index} className="text-gray-600">
                     {skill}
@@ -48,34 +56,48 @@ const AboutPage = () => {
 
           <div>
             <h2 className="text-2xl font-light text-gray-900 mb-6">Technical Expertise</h2>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-4 gap-8">
               <div>
                 <h3 className="text-lg font-light text-gray-900 mb-3">Programming</h3>
                 <div className="space-y-2 text-gray-600">
                   <div>Python</div>
-                  <div>R</div>
-                  <div>SQL</div>
+                  <div>Lua</div>
+                  <div>PHP</div>
+                  <div>HTML/CSS</div>
                   <div>JavaScript</div>
                 </div>
               </div>
               
               <div>
-                <h3 className="text-lg font-light text-gray-900 mb-3">Frameworks</h3>
+                <h3 className="text-lg font-light text-gray-900 mb-3">AI/ML</h3>
                 <div className="space-y-2 text-gray-600">
-                  <div>TensorFlow</div>
-                  <div>PyTorch</div>
-                  <div>Scikit-learn</div>
-                  <div>Pandas</div>
+                  <div>Machine Learning</div>
+                  <div>Neural Networks</div>
+                  <div>Computer Vision</div>
+                  <div>NLP</div>
+                  <div>RAG Systems</div>
                 </div>
               </div>
               
               <div>
-                <h3 className="text-lg font-light text-gray-900 mb-3">Tools</h3>
+                <h3 className="text-lg font-light text-gray-900 mb-3">Tools & Platforms</h3>
                 <div className="space-y-2 text-gray-600">
-                  <div>AWS</div>
+                  <div>NVIDIA CUDA</div>
                   <div>Docker</div>
-                  <div>Git</div>
-                  <div>Jupyter</div>
+                  <div>Arduino</div>
+                  <div>Blender</div>
+                  <div>WordPress</div>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-light text-gray-900 mb-3">Specialized</h3>
+                <div className="space-y-2 text-gray-600">
+                  <div>RFID/NFC</div>
+                  <div>3D Modeling</div>
+                  <div>CAD Design</div>
+                  <div>Robotics</div>
+                  <div>Game Development</div>
                 </div>
               </div>
             </div>

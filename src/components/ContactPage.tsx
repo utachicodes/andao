@@ -75,9 +75,24 @@ const ContactPage = () => {
               
               <div>
                 <h3 className="text-lg font-light text-gray-900 mb-2">LinkedIn</h3>
-                <a href="https://www.linkedin.com/in/abdoullahndao/" className="text-gray-600 hover:text-gray-900 transition-colors duration-300">
+                <a href="https://www.linkedin.com/in/abdoullahndao/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-colors duration-300">
                   linkedin.com/in/abdoullahndao
                 </a>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-light text-gray-900 mb-2">Availability</h3>
+                <p className="text-gray-600">Open for freelance projects and collaborations</p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-light text-gray-900 mb-2">Specializations</h3>
+                <div className="text-gray-600 text-sm space-y-1">
+                  <div>• AI/ML Development</div>
+                  <div>• Python Applications</div>
+                  <div>• Computer Vision</div>
+                  <div>• Data Analysis</div>
+                </div>
               </div>
             </div>
           </div>
