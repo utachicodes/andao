@@ -1,114 +1,201 @@
 
+import { ExternalLink, Github, Code2, Database, Brain, Smartphone } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+
 const ProjectsPage = () => {
   const projects = [
     {
-      title: "XamSaDine AI: Multilingual RAG-Based Islamic Chatbot",
-      category: "AI/NLP",
-      description: "AI-powered platform providing accurate, authentic Islamic legal rulings and religious guidance. Implemented custom RAG system with curated knowledge base from renowned Islamic scholars, supporting Wolof, French, and English responses.",
-      technologies: ["Python", "RAG", "NLP", "Docker", "Ollama", "Web Development"],
-      year: "2024",
-      details: "Transcribed over 100 Wolof audio files and built comprehensive database preventing misinformation in religious queries."
+      id: 1,
+      title: "XamSaDine AI",
+      subtitle: "Multilingual RAG-Based Islamic Chatbot",
+      description: "AI-powered platform providing accurate Islamic guidance using Retrieval-Augmented Generation. Built with custom knowledge base of transcribed content from Islamic scholars, supporting Wolof, French, and English.",
+      image: "/placeholder.svg",
+      technologies: ["Python", "RAG", "NLP", "Docker", "Ollama"],
+      category: "AI/ML",
+      icon: Brain,
+      links: {
+        demo: "#",
+        github: "#"
+      }
     },
     {
-      title: "SapioVision: Smart Facial Recognition Glasses",
+      id: 2,
+      title: "SapioVision",
+      subtitle: "Smart Facial Recognition Glasses",
+      description: "Advanced security system for Senegalese Police Force with real-time facial recognition and database integration for citizen identification and document verification.",
+      image: "/placeholder.svg",
+      technologies: ["Python", "Computer Vision", "Arduino", "Machine Learning"],
       category: "Computer Vision",
-      description: "Advanced facial recognition system designed for Senegalese Police Force with real-time database integration for citizen identification, ID/passport verification, and license status checking.",
-      technologies: ["Python", "Computer Vision", "Arduino", "Machine Learning", "CAD"],
-      year: "2024",
-      details: "Seamlessly interfaces with centralized database for instantaneous access to critical citizen data and security enforcement."
+      icon: Code2,
+      links: {
+        demo: "#",
+        github: "#"
+      }
     },
     {
-      title: "Underwater Exploration Drone with AI",
-      category: "Robotics/AI",
-      description: "Collaborative drone project equipped with machine learning algorithms for marine life detection, underwater mapping, and 3D reconstruction. Specialized in neural network development for underwater image processing.",
-      technologies: ["Neural Networks", "3D Modeling", "Deep Learning", "CUDA", "Computer Vision"],
-      year: "2024",
-      details: "Used NVIDIA tools to train models for 3D reconstruction of the Joola sunken ferry from camera data."
+      id: 3,
+      title: "Underwater Exploration Drone",
+      subtitle: "Marine Life Detection & 3D Reconstruction",
+      description: "Autonomous drone with ML algorithms for marine life detection and underwater mapping. Created 3D reconstructions using neural networks and CUDA processing.",
+      image: "/placeholder.svg",
+      technologies: ["Python", "CUDA", "Neural Networks", "3D Modeling"],
+      category: "Computer Vision",
+      icon: Database,
+      links: {
+        demo: "#",
+        github: "#"
+      }
     },
     {
-      title: "Smart Plate Dispenser System",
-      category: "IoT/Automation",
-      description: "Automated plate dispensing system for university cafeteria using RFID/NFC technology for student card recognition and database integration for subscription verification.",
-      technologies: ["RFID", "NFC", "Python", "Machine Learning", "Database Integration"],
-      year: "2024",
-      details: "Streamlined cafeteria operations ensuring only subscribed students receive plates through secure database queries."
+      id: 4,
+      title: "Smart Campus Plate Dispenser",
+      subtitle: "RFID/NFC Student Card System",
+      description: "Automated plate dispenser system using RFID/NFC technology for student card recognition and database verification at university cafeteria.",
+      image: "/placeholder.svg",
+      technologies: ["Python", "RFID/NFC", "Database Integration", "Machine Learning"],
+      category: "IoT",
+      icon: Smartphone,
+      links: {
+        demo: "#",
+        github: "#"
+      }
     },
     {
-      title: "Algae-Based Biofuel Production System",
-      category: "Bioengineering",
-      description: "Research project developing sustainable biofuel alternatives through closed-loop photobioreactor system optimized for high-lipid algae cultivation with automated monitoring and control.",
-      technologies: ["Arduino", "Python", "CAD", "Biochemistry", "Sensor Integration"],
-      year: "2023",
-      details: "Integrated monitoring sensors for optimal growth conditions including light intensity, nutrients, and CO2 concentration."
+      id: 5,
+      title: "Algae-Based Biofuel System",
+      subtitle: "Sustainable Energy Production",
+      description: "Research project developing closed-loop photobioreactor for algae cultivation with monitoring sensors and automation for optimal growth conditions.",
+      image: "/placeholder.svg",
+      technologies: ["Arduino", "Python", "CAD", "Biochemistry"],
+      category: "Research",
+      icon: Code2,
+      links: {
+        demo: "#",
+        github: "#"
+      }
     },
     {
-      title: "DeepSea AI: Marine Conservation Platform",
-      category: "AI/Conservation",
-      description: "Startup leveraging AI and drone technology for marine ecosystem monitoring and protection. Developed computer vision algorithms for marine life analysis and habitat assessment.",
-      technologies: ["Machine Learning", "Python", "Computer Vision", "Drone Technology"],
-      year: "2023-2024",
-      details: "Revolutionary approach to marine data collection offering unprecedented precision for conservation efforts."
-    },
-    {
-      title: "Educational Robotics with Mini Fighter Bots",
-      category: "Education/Robotics",
-      description: "Interactive educational platform teaching children robotics and AI through hands-on programming, sensor integration, and machine learning concepts using engaging mini fighter bots.",
-      technologies: ["Robotics", "CAD", "Arduino", "Scratch", "AI Education"],
-      year: "2023",
-      details: "Structured learning modules covering motion control, obstacle avoidance, and basic AI algorithms for STEM education."
-    },
-    {
-      title: "Mad City Weapon Systems (Roblox)",
-      category: "Game Development",
-      description: "Enhanced gameplay experience for Mad City on Roblox platform, focusing on weapon mechanics development, game balance optimization, and feature integration.",
-      technologies: ["Lua", "Blender", "Game Mechanics", "Game Development"],
-      year: "2022-Present",
-      details: "Scripted new weapon mechanics, improved balance, and ensured smooth integration of weapon features."
+      id: 6,
+      title: "Educational Robotics Platform",
+      subtitle: "Mini Fighter Bots for Learning",
+      description: "Interactive robotics platform teaching children programming, AI concepts, and sensor integration through hands-on workshops and structured modules.",
+      image: "/placeholder.svg",
+      technologies: ["Arduino", "CAD", "Scratch", "Robotics"],
+      category: "Education",
+      icon: Brain,
+      links: {
+        demo: "#",
+        github: "#"
+      }
     }
   ];
 
+  const categories = ['All', 'AI/ML', 'Computer Vision', 'IoT', 'Research', 'Education'];
+  
   return (
-    <div className="min-h-screen pt-32 pb-16 bg-white">
-      <div className="max-w-4xl mx-auto px-6">
+    <div className="min-h-screen pt-24 pb-16 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+      <div className="max-w-6xl mx-auto px-6">
         <div className="mb-16">
-          <h1 className="text-5xl md:text-6xl font-light mb-8 text-gray-900">
+          <h1 className="text-4xl md:text-5xl font-light mb-6 text-white">
             Projects
           </h1>
-          <div className="w-16 h-px bg-gray-300 mb-12"></div>
+          <div className="w-20 h-px bg-gray-600 mb-8"></div>
+          <p className="text-xl text-gray-400 font-light">
+            A collection of projects showcasing my journey in AI, data analysis, and development
+          </p>
         </div>
 
-        <div className="space-y-16">
-          {projects.map((project, index) => (
-            <div key={index} className="border-b border-gray-100 pb-12 last:border-b-0">
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                <div>
-                  <h3 className="text-2xl font-light text-gray-900 mb-2">{project.title}</h3>
-                  <span className="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
-                    {project.category}
-                  </span>
+        {/* Project Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => {
+            const IconComponent = project.icon;
+            
+            return (
+              <div
+                key={project.id}
+                className="group bg-gray-800/30 border border-gray-700/50 rounded-xl overflow-hidden hover:border-gray-600/50 transition-all duration-300 hover:-translate-y-1"
+                style={{
+                  animationDelay: `${index * 100}ms`
+                }}
+              >
+                {/* Project image/icon area */}
+                <div className="aspect-video bg-gradient-to-br from-gray-700/30 to-gray-800/30 relative overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <IconComponent className="w-12 h-12 text-gray-400" />
+                  </div>
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-gray-700/50 text-gray-300 px-3 py-1 rounded-full text-xs font-medium">
+                      {project.category}
+                    </span>
+                  </div>
                 </div>
-                <span className="text-gray-500 text-sm mt-2 md:mt-0">{project.year}</span>
+                
+                <div className="p-6">
+                  <h3 className="text-lg font-medium text-white mb-2 group-hover:text-gray-300 transition-colors duration-300">
+                    {project.title}
+                  </h3>
+                  
+                  <p className="text-sm text-gray-400 mb-3">
+                    {project.subtitle}
+                  </p>
+                  
+                  <p className="text-gray-400 text-sm mb-4 leading-relaxed line-clamp-3">
+                    {project.description}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="text-xs bg-gray-700/30 text-gray-400 px-2 py-1 rounded border border-gray-600/30"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <div className="flex gap-3">
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="text-gray-400 hover:text-white p-0 h-auto font-medium"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-1" />
+                      Demo
+                    </Button>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="text-gray-400 hover:text-white p-0 h-auto font-medium"
+                    >
+                      <Github className="w-4 h-4 mr-1" />
+                      Code
+                    </Button>
+                  </div>
+                </div>
               </div>
-              
-              <p className="text-gray-600 leading-relaxed mb-4">
-                {project.description}
-              </p>
+            );
+          })}
+        </div>
 
-              {project.details && (
-                <p className="text-gray-500 text-sm leading-relaxed mb-6 italic">
-                  {project.details}
-                </p>
-              )}
-              
-              <div className="flex flex-wrap gap-2">
-                {project.technologies.map((tech, techIndex) => (
-                  <span key={techIndex} className="text-xs text-gray-600 border border-gray-200 px-2 py-1 rounded">
-                    {tech}
-                  </span>
-                ))}
+        {/* Note about projects */}
+        <div className="mt-16 text-center">
+          <div className="bg-gray-800/30 border border-gray-700/50 rounded-xl p-8">
+            <Code2 className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+            <h3 className="text-xl font-medium text-white mb-2">More Projects in Development</h3>
+            <p className="text-gray-400 mb-6">
+              I'm constantly working on new projects and exploring emerging technologies. 
+              Check back soon for updates!
+            </p>
+            <div className="bg-gray-900/50 border border-gray-700/30 rounded-lg p-4 font-mono text-sm text-left max-w-md mx-auto">
+              <div className="text-gray-400">$ git status</div>
+              <div className="text-gray-500 mt-2">
+                On branch main<br/>
+                Your branch is up to date with 'origin/main'.<br/>
+                <span className="text-gray-400">Working on new features...</span>
               </div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </div>

@@ -1,226 +1,199 @@
 
-import { useState } from 'react';
+import { Mail, Phone, MapPin, Download, Github, Linkedin, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Mail, Phone, MapPin, Download, ExternalLink, Send, Github, Linkedin } from 'lucide-react';
 
 const ContactPage = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+  const contactInfo = [
+    {
+      icon: Mail,
+      label: "Email",
+      value: "abdoullahaljersi@gmail.com",
+      link: "mailto:abdoullahaljersi@gmail.com"
+    },
+    {
+      icon: Phone,
+      label: "Phone",
+      value: "+221 78 108 05 06",
+      link: "tel:+221781080506"
+    },
+    {
+      icon: MapPin,
+      label: "Location",
+      value: "Dakar, Senegal",
+      link: null
+    }
+  ];
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  const socialLinks = [
+    {
+      icon: Linkedin,
+      label: "LinkedIn",
+      link: "https://www.linkedin.com/in/abdoullahndao/",
+      username: "abdoullahndao"
+    },
+    {
+      icon: Github,
+      label: "GitHub",
+      link: "#",
+      username: "abdoullah-ndao"
+    }
+  ];
 
   return (
-    <div className="min-h-screen pt-24 pb-16 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Header */}
+    <div className="min-h-screen pt-24 pb-16 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+      <div className="max-w-4xl mx-auto px-6">
         <div className="mb-16">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center">
-              <Mail className="w-6 h-6 text-green-400" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
-              Get in Touch
-            </h1>
-          </div>
-          <p className="text-xl text-gray-300 font-light max-w-3xl">
-            Ready to collaborate on your next AI project or discuss innovative solutions? Let's connect!
+          <h1 className="text-4xl md:text-5xl font-light mb-6 text-white">
+            Get In Touch
+          </h1>
+          <div className="w-20 h-px bg-gray-600 mb-8"></div>
+          <p className="text-xl text-gray-400 font-light">
+            Let's discuss opportunities, collaborate on projects, or just have a conversation about tech
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
-          {/* Contact Form */}
-          <div>
-            <div className="bg-gray-800/30 border border-gray-700 rounded-xl p-8">
-              <h2 className="text-2xl font-semibold text-white mb-6 flex items-center gap-3">
-                <Send className="w-6 h-6 text-green-400" />
-                Send Message
-              </h2>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label className="block text-sm text-gray-300 mb-2 font-medium">Name</label>
-                  <input 
-                    type="text" 
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-lg focus:border-green-400 focus:ring-1 focus:ring-green-400 text-white placeholder-gray-400 transition-all duration-300"
-                    placeholder="Your name"
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm text-gray-300 mb-2 font-medium">Email</label>
-                  <input 
-                    type="email" 
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-lg focus:border-green-400 focus:ring-1 focus:ring-green-400 text-white placeholder-gray-400 transition-all duration-300"
-                    placeholder="your@email.com"
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm text-gray-300 mb-2 font-medium">Subject</label>
-                  <input 
-                    type="text" 
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-lg focus:border-green-400 focus:ring-1 focus:ring-green-400 text-white placeholder-gray-400 transition-all duration-300"
-                    placeholder="Project inquiry / Collaboration / Other"
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm text-gray-300 mb-2 font-medium">Message</label>
-                  <textarea 
-                    rows={6}
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-lg focus:border-green-400 focus:ring-1 focus:ring-green-400 text-white placeholder-gray-400 resize-none transition-all duration-300"
-                    placeholder="Tell me about your project or how we can collaborate..."
-                    required
-                  />
-                </div>
-                
-                <Button 
-                  type="submit"
-                  className="w-full bg-green-500 hover:bg-green-600 text-black font-semibold py-3 transition-all duration-300 hover:scale-105"
-                >
-                  <Send className="w-5 h-5 mr-2" />
-                  Send Message
-                </Button>
-              </form>
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact Information */}
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-2xl font-medium text-white mb-6">Contact Information</h2>
+              <div className="space-y-4">
+                {contactInfo.map((item, index) => (
+                  <div key={index} className="group">
+                    {item.link ? (
+                      <a 
+                        href={item.link}
+                        className="flex items-center gap-4 p-4 bg-gray-800/30 border border-gray-700/50 rounded-xl hover:border-gray-600/50 transition-all duration-300"
+                      >
+                        <div className="w-10 h-10 bg-gray-700/50 rounded-lg flex items-center justify-center">
+                          <item.icon className="w-5 h-5 text-white" />
+                        </div>
+                        <div>
+                          <div className="text-sm text-gray-400">{item.label}</div>
+                          <div className="text-white font-medium">{item.value}</div>
+                        </div>
+                      </a>
+                    ) : (
+                      <div className="flex items-center gap-4 p-4 bg-gray-800/30 border border-gray-700/50 rounded-xl">
+                        <div className="w-10 h-10 bg-gray-700/50 rounded-lg flex items-center justify-center">
+                          <item.icon className="w-5 h-5 text-white" />
+                        </div>
+                        <div>
+                          <div className="text-sm text-gray-400">{item.label}</div>
+                          <div className="text-white font-medium">{item.value}</div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div>
+              <h3 className="text-lg font-medium text-white mb-4">Connect With Me</h3>
+              <div className="space-y-3">
+                {socialLinks.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between p-4 bg-gray-800/30 border border-gray-700/50 rounded-xl hover:border-gray-600/50 transition-all duration-300 group"
+                  >
+                    <div className="flex items-center gap-3">
+                      <social.icon className="w-5 h-5 text-white" />
+                      <div>
+                        <div className="text-white font-medium">{social.label}</div>
+                        <div className="text-gray-400 text-sm">{social.username}</div>
+                      </div>
+                    </div>
+                    <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-white transition-colors duration-300" />
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Resume Download */}
+            <div className="bg-gray-800/30 border border-gray-700/50 rounded-xl p-6">
+              <h3 className="text-lg font-medium text-white mb-3">Resume</h3>
+              <p className="text-gray-400 text-sm mb-4">
+                Download my resume to learn more about my experience and skills.
+              </p>
+              <Button 
+                className="bg-white text-black hover:bg-gray-100 font-medium"
+                onClick={() => {
+                  // Replace with your Google Drive link
+                  window.open('YOUR_GOOGLE_DRIVE_RESUME_LINK', '_blank');
+                }}
+              >
+                <Download className="w-4 h-4 mr-2" />
+                Download Resume
+              </Button>
+              <p className="text-xs text-gray-500 mt-2">
+                Note: Please add your Google Drive resume link to make this functional
+              </p>
             </div>
           </div>
 
-          {/* Contact Information */}
-          <div className="space-y-8">
-            {/* Quick Contact */}
-            <div className="bg-gray-800/30 border border-gray-700 rounded-xl p-8">
-              <h2 className="text-2xl font-semibold text-white mb-6">Contact Information</h2>
-              
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-green-400" />
-                  </div>
+          {/* Quick Message */}
+          <div className="space-y-6">
+            <div>
+              <h2 className="text-2xl font-medium text-white mb-6">Send a Quick Message</h2>
+              <div className="bg-gray-800/30 border border-gray-700/50 rounded-xl p-6">
+                <div className="space-y-4">
                   <div>
-                    <h3 className="text-lg font-medium text-white">Email</h3>
-                    <a 
-                      href="mailto:abdoullahaljersi@gmail.com" 
-                      className="text-green-400 hover:text-green-300 transition-colors duration-300"
-                    >
-                      abdoullahaljersi@gmail.com
-                    </a>
+                    <label className="block text-sm font-medium text-gray-400 mb-2">
+                      Your Name
+                    </label>
+                    <input
+                      type="text"
+                      className="w-full bg-gray-700/30 border border-gray-600/50 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-gray-500 focus:outline-none transition-colors duration-300"
+                      placeholder="Enter your name"
+                    />
                   </div>
-                </div>
-                
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-blue-400" />
-                  </div>
+                  
                   <div>
-                    <h3 className="text-lg font-medium text-white">Phone</h3>
-                    <a 
-                      href="tel:+221781080506" 
-                      className="text-blue-400 hover:text-blue-300 transition-colors duration-300"
-                    >
-                      +221 78 108 05 06
-                    </a>
+                    <label className="block text-sm font-medium text-gray-400 mb-2">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      className="w-full bg-gray-700/30 border border-gray-600/50 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-gray-500 focus:outline-none transition-colors duration-300"
+                      placeholder="your.email@example.com"
+                    />
                   </div>
-                </div>
-                
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-purple-400" />
-                  </div>
+                  
                   <div>
-                    <h3 className="text-lg font-medium text-white">Location</h3>
-                    <p className="text-purple-400">Dakar, Senegal</p>
+                    <label className="block text-sm font-medium text-gray-400 mb-2">
+                      Message
+                    </label>
+                    <textarea
+                      rows={4}
+                      className="w-full bg-gray-700/30 border border-gray-600/50 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-gray-500 focus:outline-none transition-colors duration-300 resize-none"
+                      placeholder="Tell me about your project or opportunity..."
+                    ></textarea>
                   </div>
+                  
+                  <Button 
+                    className="w-full bg-white text-black hover:bg-gray-100 font-medium"
+                  >
+                    Send Message
+                  </Button>
                 </div>
               </div>
             </div>
 
-            {/* Resume & Links */}
-            <div className="bg-gray-800/30 border border-gray-700 rounded-xl p-8">
-              <h2 className="text-2xl font-semibold text-white mb-6">Resources</h2>
-              
-              <div className="space-y-4">
-                <Button 
-                  className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 transition-all duration-300 hover:scale-105"
-                  onClick={() => window.open('#', '_blank')} // Replace with actual Google Drive link
-                >
-                  <Download className="w-5 h-5 mr-2" />
-                  Download Resume
-                </Button>
-                
-                <Button 
-                  variant="outline"
-                  className="w-full border-green-400 text-green-400 hover:bg-green-400 hover:text-black font-semibold py-3 transition-all duration-300 hover:scale-105"
-                  onClick={() => window.open('https://www.linkedin.com/in/abdoullahndao/', '_blank')}
-                >
-                  <Linkedin className="w-5 h-5 mr-2" />
-                  LinkedIn Profile
-                </Button>
-                
-                <Button 
-                  variant="outline"
-                  className="w-full border-gray-400 text-gray-400 hover:bg-gray-400 hover:text-black font-semibold py-3 transition-all duration-300 hover:scale-105"
-                  onClick={() => window.open('#', '_blank')} // Replace with actual GitHub link
-                >
-                  <Github className="w-5 h-5 mr-2" />
-                  GitHub Portfolio
-                </Button>
+            {/* Availability Status */}
+            <div className="bg-gray-800/30 border border-gray-700/50 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                <h3 className="text-lg font-medium text-white">Currently Available</h3>
               </div>
-            </div>
-
-            {/* Availability */}
-            <div className="bg-gray-800/30 border border-gray-700 rounded-xl p-8">
-              <h2 className="text-2xl font-semibold text-white mb-6">Availability</h2>
-              
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-gray-300">Available for freelance projects</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-gray-300">Open to full-time opportunities</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-gray-300">Available for consulting</span>
-                </div>
-              </div>
-              
-              <div className="mt-6 p-4 bg-green-500/10 border border-green-500/30 rounded-lg">
-                <p className="text-sm text-green-400">
-                  <strong>Response Time:</strong> Usually within 24 hours
-                </p>
-              </div>
+              <p className="text-gray-400 text-sm">
+                I'm actively looking for internship opportunities, freelance projects, 
+                and collaboration on interesting tech challenges. Let's build something amazing together!
+              </p>
             </div>
           </div>
         </div>

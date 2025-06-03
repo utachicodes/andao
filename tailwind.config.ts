@@ -78,27 +78,13 @@ export default {
 				},
 				'float': {
 					'0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
-					'50%': { transform: 'translateY(-20px) rotate(5deg)' }
-				},
-				'glow': {
-					'0%, 100%': { boxShadow: '0 0 5px rgba(16, 185, 129, 0.5)' },
-					'50%': { boxShadow: '0 0 20px rgba(16, 185, 129, 0.8)' }
-				},
-				'typing': {
-					'from': { width: '0' },
-					'to': { width: '100%' }
-				},
-				'blink': {
-					'50%': { opacity: '0' }
+					'50%': { transform: 'translateY(-10px) rotate(2deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'float': 'float 6s ease-in-out infinite',
-				'glow': 'glow 3s ease-in-out infinite',
-				'typing': 'typing 2s steps(20, end)',
-				'blink': 'blink 1s step-end infinite'
+				'float': 'float 6s ease-in-out infinite'
 			},
 			fontFamily: {
 				'inter': ['Inter', 'sans-serif'],
