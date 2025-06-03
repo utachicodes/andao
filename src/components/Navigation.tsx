@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Code2 } from 'lucide-react';
 
@@ -15,6 +14,7 @@ const Navigation = ({ currentPage, onNavigate }: NavigationProps) => {
     { id: 'about', label: 'About' },
     { id: 'experience', label: 'Experience' },
     { id: 'projects', label: 'Projects' },
+    { id: 'poetry', label: 'Poetry' },
     { id: 'contact', label: 'Contact' }
   ];
 

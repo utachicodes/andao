@@ -1,6 +1,5 @@
 
-import { ExternalLink, Github, Code2, Database, Brain, Smartphone } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Code2, Database, Brain, Smartphone } from 'lucide-react';
 
 const ProjectsPage = () => {
   const projects = [
@@ -9,88 +8,56 @@ const ProjectsPage = () => {
       title: "XamSaDine AI",
       subtitle: "Multilingual RAG-Based Islamic Chatbot",
       description: "AI-powered platform providing accurate Islamic guidance using Retrieval-Augmented Generation. Built with custom knowledge base of transcribed content from Islamic scholars, supporting Wolof, French, and English.",
-      image: "/placeholder.svg",
       technologies: ["Python", "RAG", "NLP", "Docker", "Ollama"],
       category: "AI/ML",
-      icon: Brain,
-      links: {
-        demo: "#",
-        github: "#"
-      }
+      icon: Brain
     },
     {
       id: 2,
       title: "SapioVision",
       subtitle: "Smart Facial Recognition Glasses",
       description: "Advanced security system for Senegalese Police Force with real-time facial recognition and database integration for citizen identification and document verification.",
-      image: "/placeholder.svg",
       technologies: ["Python", "Computer Vision", "Arduino", "Machine Learning"],
       category: "Computer Vision",
-      icon: Code2,
-      links: {
-        demo: "#",
-        github: "#"
-      }
+      icon: Code2
     },
     {
       id: 3,
       title: "Underwater Exploration Drone",
       subtitle: "Marine Life Detection & 3D Reconstruction",
       description: "Autonomous drone with ML algorithms for marine life detection and underwater mapping. Created 3D reconstructions using neural networks and CUDA processing.",
-      image: "/placeholder.svg",
       technologies: ["Python", "CUDA", "Neural Networks", "3D Modeling"],
       category: "Computer Vision",
-      icon: Database,
-      links: {
-        demo: "#",
-        github: "#"
-      }
+      icon: Database
     },
     {
       id: 4,
       title: "Smart Campus Plate Dispenser",
       subtitle: "RFID/NFC Student Card System",
       description: "Automated plate dispenser system using RFID/NFC technology for student card recognition and database verification at university cafeteria.",
-      image: "/placeholder.svg",
       technologies: ["Python", "RFID/NFC", "Database Integration", "Machine Learning"],
       category: "IoT",
-      icon: Smartphone,
-      links: {
-        demo: "#",
-        github: "#"
-      }
+      icon: Smartphone
     },
     {
       id: 5,
       title: "Algae-Based Biofuel System",
       subtitle: "Sustainable Energy Production",
       description: "Research project developing closed-loop photobioreactor for algae cultivation with monitoring sensors and automation for optimal growth conditions.",
-      image: "/placeholder.svg",
       technologies: ["Arduino", "Python", "CAD", "Biochemistry"],
       category: "Research",
-      icon: Code2,
-      links: {
-        demo: "#",
-        github: "#"
-      }
+      icon: Code2
     },
     {
       id: 6,
       title: "Educational Robotics Platform",
       subtitle: "Mini Fighter Bots for Learning",
       description: "Interactive robotics platform teaching children programming, AI concepts, and sensor integration through hands-on workshops and structured modules.",
-      image: "/placeholder.svg",
       technologies: ["Arduino", "CAD", "Scratch", "Robotics"],
       category: "Education",
-      icon: Brain,
-      links: {
-        demo: "#",
-        github: "#"
-      }
+      icon: Brain
     }
   ];
-
-  const categories = ['All', 'AI/ML', 'Computer Vision', 'IoT', 'Research', 'Education'];
   
   return (
     <div className="min-h-screen pt-24 pb-16 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
@@ -105,7 +72,6 @@ const ProjectsPage = () => {
           </p>
         </div>
 
-        {/* Project Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => {
             const IconComponent = project.icon;
@@ -118,19 +84,14 @@ const ProjectsPage = () => {
                   animationDelay: `${index * 100}ms`
                 }}
               >
-                {/* Project image/icon area */}
-                <div className="aspect-video bg-gradient-to-br from-gray-700/30 to-gray-800/30 relative overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <IconComponent className="w-12 h-12 text-gray-400" />
-                  </div>
-                  <div className="absolute top-4 left-4">
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <IconComponent className="w-8 h-8 text-gray-400" />
                     <span className="bg-gray-700/50 text-gray-300 px-3 py-1 rounded-full text-xs font-medium">
                       {project.category}
                     </span>
                   </div>
-                </div>
-                
-                <div className="p-6">
+                  
                   <h3 className="text-lg font-medium text-white mb-2 group-hover:text-gray-300 transition-colors duration-300">
                     {project.title}
                   </h3>
@@ -139,11 +100,11 @@ const ProjectsPage = () => {
                     {project.subtitle}
                   </p>
                   
-                  <p className="text-gray-400 text-sm mb-4 leading-relaxed line-clamp-3">
+                  <p className="text-gray-400 text-sm mb-4 leading-relaxed">
                     {project.description}
                   </p>
                   
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
@@ -153,32 +114,12 @@ const ProjectsPage = () => {
                       </span>
                     ))}
                   </div>
-                  
-                  <div className="flex gap-3">
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="text-gray-400 hover:text-white p-0 h-auto font-medium"
-                    >
-                      <ExternalLink className="w-4 h-4 mr-1" />
-                      Demo
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="text-gray-400 hover:text-white p-0 h-auto font-medium"
-                    >
-                      <Github className="w-4 h-4 mr-1" />
-                      Code
-                    </Button>
-                  </div>
                 </div>
               </div>
             );
           })}
         </div>
 
-        {/* Note about projects */}
         <div className="mt-16 text-center">
           <div className="bg-gray-800/30 border border-gray-700/50 rounded-xl p-8">
             <Code2 className="w-12 h-12 text-gray-400 mx-auto mb-4" />

@@ -1,4 +1,3 @@
-
 import { Mail, Phone, MapPin, Download, Github, Linkedin, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -28,14 +27,14 @@ const ContactPage = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      link: "https://www.linkedin.com/in/abdoullahndao/",
+      link: "https://www.linkedin.com/in/abdoullahndao",
       username: "abdoullahndao"
     },
     {
       icon: Github,
       label: "GitHub",
-      link: "#",
-      username: "abdoullah-ndao"
+      link: "https://github.com/utachicodes",
+      username: "utachicodes"
     }
   ];
 
@@ -53,7 +52,6 @@ const ContactPage = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
           <div className="space-y-8">
             <div>
               <h2 className="text-2xl font-medium text-white mb-6">Contact Information</h2>
@@ -89,7 +87,6 @@ const ContactPage = () => {
               </div>
             </div>
 
-            {/* Social Links */}
             <div>
               <h3 className="text-lg font-medium text-white mb-4">Connect With Me</h3>
               <div className="space-y-3">
@@ -114,7 +111,6 @@ const ContactPage = () => {
               </div>
             </div>
 
-            {/* Resume Download */}
             <div className="bg-gray-800/30 border border-gray-700/50 rounded-xl p-6">
               <h3 className="text-lg font-medium text-white mb-3">Resume</h3>
               <p className="text-gray-400 text-sm mb-4">
@@ -136,7 +132,6 @@ const ContactPage = () => {
             </div>
           </div>
 
-          {/* Quick Message */}
           <div className="space-y-6">
             <div>
               <h2 className="text-2xl font-medium text-white mb-6">Send a Quick Message</h2>
@@ -184,7 +179,6 @@ const ContactPage = () => {
               </div>
             </div>
 
-            {/* Availability Status */}
             <div className="bg-gray-800/30 border border-gray-700/50 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>

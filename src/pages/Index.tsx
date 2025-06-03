@@ -1,10 +1,10 @@
-
 import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import HomePage from '@/components/HomePage';
 import AboutPage from '@/components/AboutPage';
 import ExperiencePage from '@/components/ExperiencePage';
 import ProjectsPage from '@/components/ProjectsPage';
+import PoetryPage from '@/components/PoetryPage';
 import ContactPage from '@/components/ContactPage';
 
 const Index = () => {
@@ -20,6 +20,8 @@ const Index = () => {
         return <ExperiencePage />;
       case 'projects':
         return <ProjectsPage />;
+      case 'poetry':
+        return <PoetryPage />;
       case 'contact':
         return <ContactPage />;
       default:
