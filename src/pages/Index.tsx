@@ -5,6 +5,7 @@ import HomePage from '@/components/HomePage';
 import AboutPage from '@/components/AboutPage';
 import ExperiencePage from '@/components/ExperiencePage';
 import ProjectsPage from '@/components/ProjectsPage';
+import BlogPage from '@/components/BlogPage';
 import ContactPage from '@/components/ContactPage';
 
 const Index = () => {
@@ -20,6 +21,8 @@ const Index = () => {
         return <ExperiencePage />;
       case 'projects':
         return <ProjectsPage />;
+      case 'blog':
+        return <BlogPage />;
       case 'contact':
         return <ContactPage />;
       default:
@@ -28,17 +31,20 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-900">
       <Navigation currentPage={currentPage} onNavigate={setCurrentPage} />
       
       <div className="transition-all duration-500 ease-in-out">
         {renderPage()}
       </div>
       
-      <footer className="border-t border-gray-100 py-8">
+      <footer className="border-t border-gray-700 bg-gray-900 py-8">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <div className="text-sm font-light text-gray-500">
-            © 2024 Abdoullah Ndao
+          <div className="text-sm font-light text-gray-400">
+            © 2025 Abdoullah Ndao - Built with React & TypeScript
+          </div>
+          <div className="text-xs text-gray-500 mt-2 font-mono">
+            console.log("Thanks for visiting! 👨‍💻");
           </div>
         </div>
       </footer>
