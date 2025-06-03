@@ -1,6 +1,5 @@
 {
   "name": "portfolio-website",
-  "homepage": "https://utachicodes.github.io/portfolio-website",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,8 +9,6 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
