@@ -64,7 +64,6 @@ This project is open-source under the [MIT License](LICENSE).
 
 * **Email:** [abdoullahaljersi@gmail.com](mailto:abdoullahaljersi@gmail.com)
 * **GitHub:** [@utachicodes](https://github.com/utachicodes)
-* **Location:** Dakar, Senegal
 
 ---
 
