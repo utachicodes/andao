@@ -119,7 +119,7 @@ const ContactPage = () => {
             <Button 
               className="bg-white text-black hover:bg-gray-100 font-medium"
               onClick={() => {
-                window.open('YOUR_GOOGLE_DRIVE_RESUME_LINK', '_blank');
+                window.open('https://docs.google.com/document/d/1GWOCG96sRl3i_czb2guBgxTNcF1VbjeYt4DMUpL6RGI/edit?usp=sharing', '_blank');
               }}
             >
               <Download className="w-4 h-4 mr-2" />
