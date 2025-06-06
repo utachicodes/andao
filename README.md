@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is my personal developer portfolio — a fully custom-built web application designed to showcase my skills, projects, and ongoing journey in software development, machine learning, and product building.
+This is my personal developer portfolio a fully custom-built web application designed to showcase my skills, projects, and ongoing journey in software development, machine learning, and product building.
 
 Every section of this portfolio is handcrafted using modern frontend tools with performance, responsiveness, and simplicity in mind. No templates, no drag-and-drop builders — just clean, efficient code built from scratch.
 
